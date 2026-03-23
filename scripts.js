@@ -74,4 +74,29 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transition = 'none'; // remove transition for snappy tracking
         });
     });
+
+    // 4. Parallax Scroll Animations for Orbs
+    const orbs = document.querySelectorAll('.parallax-orb');
+    
+    // Each orb gets a different speed relative to scroll
+    const orbSpeeds = [
+        { el: orbs[0], speed: 0.3, offsetX: 50 },
+        { el: orbs[1], speed: -0.15, offsetX: -30 },
+        { el: orbs[2], speed: 0.4, offsetX: -60 }
+    ];
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        
+        orbSpeeds.forEach(orbData => {
+            if(orbData.el) {
+                // Move elements down/up based on scroll value to give illusion of depth
+                const yPos = scrolled * orbData.speed;
+                // Add a subtle horizontal sway based on scroll for extra dimension
+                const xPos = Math.sin(scrolled * 0.002) * orbData.offsetX;
+                
+                orbData.el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+            }
+        });
+    });
 });

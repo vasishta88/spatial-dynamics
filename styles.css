@@ -129,6 +129,28 @@ h1, h2, h3, h4, .logo-text {
     max-width: 1200px;
     margin: 0 auto;
     padding: 8rem 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.glass-section {
+    background: rgba(20, 20, 25, 0.4);
+    border: 1px solid var(--surface-border);
+    border-radius: 40px;
+    padding: 6rem 4rem;
+    margin: 4rem auto 8rem auto;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (max-width: 768px) {
+    .glass-section {
+        border-radius: 20px;
+        padding: 4rem 2rem;
+        margin: 2rem auto 4rem auto;
+    }
 }
 
 .text-center {
@@ -245,18 +267,18 @@ h1, h2, h3, h4, .logo-text {
     transform: translateY(-2px);
 }
 
-/* Glass Card Global */
+/* Glass Card Global (used for inner elements now) */
 .glass-card {
-    background: var(--surface-color);
-    border: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 3rem;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    transition: transform 0.4s ease;
 }
 
 /* About Section */
@@ -467,9 +489,7 @@ h1, h2, h3, h4, .logo-text {
 }
 
 /* Contact Section */
-.contact-card {
-    max-width: 600px;
-    margin: 0 auto;
+.contact-section .section-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -573,6 +593,40 @@ footer {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
+}
+
+/* Parallax Animating Orbs */
+.parallax-orb {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(60px);
+    z-index: 1; /* behind the glass sections but above background blobs */
+    transition: transform 0.1s linear;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: 10%;
+    background: radial-gradient(circle, rgba(255, 140, 40, 0.15) 0%, transparent 60%);
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    top: 30vh;
+    left: -100px;
+    background: radial-gradient(circle, rgba(255, 70, 0, 0.1) 0%, transparent 60%);
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    bottom: -100px;
+    right: 20%;
+    background: radial-gradient(circle, rgba(255, 200, 100, 0.1) 0%, transparent 60%);
 }
 
 /* Responsive Design */

@@ -8,11 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
     <div class="blob-bg"></div>
     <div class="blob-bg blob-bg-2"></div>
+    
+    <!-- Floating animating elements -->
+    <div class="parallax-orb orb-1"></div>
+    <div class="parallax-orb orb-2"></div>
+    <div class="parallax-orb orb-3"></div>
     
     <nav class="navbar">
         <div class="nav-content">
@@ -50,7 +55,7 @@
         </section>
 
         <section id="about" class="about-section fade-in">
-            <div class="section-container">
+            <div class="section-container glass-section">
                 <div class="about-grid">
                     <div class="about-text">
                         <h2 class="section-title">Beyond Screens.</h2>
@@ -80,7 +85,7 @@
         </section>
 
         <section id="products" class="products-section fade-in">
-            <div class="section-container">
+            <div class="section-container glass-section">
                 <div class="section-header text-center">
                     <h2 class="section-title">Our Products</h2>
                     <p class="section-subtitle">What we're building and exploring.</p>
@@ -117,8 +122,7 @@
         </section>
 
         <section id="contact" class="contact-section fade-in">
-            <div class="section-container">
-                <div class="glass-card contact-card">
+            <div class="section-container glass-section">
                     <div class="card-glow"></div>
                     <h2 class="section-title text-center">Let's Connect</h2>
                     <p class="text-center contact-desc">Interested in what we're building? Get in touch.</p>
@@ -132,7 +136,6 @@
                         </span>
                         admin@spatial-dynamics.net
                     </a>
-                </div>
             </div>
         </section>
     </main>
@@ -147,6 +150,6 @@
         </div>
     </footer>
 
-    <script src="scripts.js?v=2"></script>
+    <script src="scripts.js?v=3"></script>
 </body>
 </html>
