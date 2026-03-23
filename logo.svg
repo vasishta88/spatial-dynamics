@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="primaryGrad" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#8c64ff"/>
+        </linearGradient>
+        <linearGradient id="secondaryGrad" x1="180" y1="20" x2="20" y2="180" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#2896ff"/>
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+    </defs>
+    
+    <!-- Abstract 3D S / D intersection logo -->
+    <!-- Base Shape (D) -->
+    <path d="M50 40H110C143.137 40 170 66.8629 170 100C170 133.137 143.137 160 110 160H50V40Z" stroke="url(#secondaryGrad)" stroke-width="12" stroke-linejoin="round"/>
+    
+    <!-- Intersecting Shape (S) -->
+    <path d="M140 60C140 48.9543 131.046 40 120 40H70C53.4315 40 40 53.4315 40 70C40 86.5685 53.4315 100 70 100H130C146.568 100 160 113.431 160 130C160 146.568 146.568 160 130 160H80C68.9543 160 60 151.046 60 140" stroke="url(#primaryGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    
+    <!-- Central Dimensional Dot -->
+    <circle cx="100" cy="100" r="16" fill="#ffffff" filter="url(#glow)"/>
+</svg>

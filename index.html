@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Dynamics LLC</title>
+    <meta name="description" content="We build products at the intersection of design, motion, and technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-bg-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="logo.svg" alt="Spatial Dynamics Logo" class="logo-img">
+                <span class="logo-text">Spatial Dynamics</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content" data-tilt>
+                <div class="pill-badge">Building the future</div>
+                <h1 class="hero-title">Spatial<br><span class="gradient-text">Dynamics LLC</span></h1>
+                <p class="hero-tagline">Building immersive digital experiences.</p>
+                <p class="hero-subtext">We build products at the intersection of design, motion, and technology.</p>
+                
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">Our Products</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-tilt data-tilt-reverse="true">
+                <div class="abstract-shape shape-1"></div>
+                <div class="abstract-shape shape-2"></div>
+                <div class="abstract-shape shape-3"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section fade-in">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">Beyond Screens.</h2>
+                        <p class="section-description">
+                            Spatial Dynamics LLC is a digital product lab focused on crafting engaging, delightful experiences. We believe software shouldn't just be functional—it should feel alive.
+                        </p>
+                        <p class="section-description">
+                            By combining modern aesthetics, fluid motion, and robust engineering, we create products that users don't just use, but love.
+                        </p>
+                    </div>
+                    <div class="about-card-wrapper" data-tilt>
+                        <div class="glass-card about-card">
+                            <div class="card-glow"></div>
+                            <div class="card-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Dimensional Design</h3>
+                            <p>Bringing depth and delight to every interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section fade-in">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Products</h2>
+                    <p class="section-subtitle">What we're building and exploring.</p>
+                </div>
+                
+                <div class="products-grid">
+                    <a href="https://torq-tribe.github.io/" target="_blank" class="product-card" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="product-image-container torq-tribe-bg">
+                            <div class="product-logo">TT</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge">Active</div>
+                            <h3 class="product-name">Torq Tribe</h3>
+                            <p class="product-desc">A premium fitness app designed to awaken your primal strength with intuitive workout tracking and dynamic energy.</p>
+                            <span class="product-link">Visit Website <span class="arrow">→</span></span>
+                        </div>
+                    </a>
+
+                    <div class="product-card skeleton" data-tilt>
+                        <div class="card-glow"></div>
+                        <div class="product-image-container grid-bg">
+                            <div class="pulse-ring"></div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-badge upcoming">In Development</div>
+                            <h3 class="product-name">Project Horizon</h3>
+                            <p class="product-desc">Our next exploration into utility applications. Currently in closed stealth development.</p>
+                            <span class="product-link disabled">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
+            <div class="section-container">
+                <div class="glass-card contact-card">
+                    <div class="card-glow"></div>
+                    <h2 class="section-title text-center">Let's Connect</h2>
+                    <p class="text-center contact-desc">Interested in what we're building? Get in touch.</p>
+                    
+                    <a href="mailto:admin@spatial-dynamics.net" class="contact-email">
+                        <span class="email-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        admin@spatial-dynamics.net
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.svg" alt="Spatial Dynamics Logo" class="footer-logo-img">
+                <span>Spatial Dynamics LLC</span>
+            </div>
+            <p class="copyright">&copy; 2026 Spatial Dynamics LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
